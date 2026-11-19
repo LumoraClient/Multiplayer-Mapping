@@ -1,0 +1,38 @@
+name: Mapping aktualisieren
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-mapping
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Quellen lesen und Mapping bauen
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          "$JAVA_HOME_21_X64/bin/java" -Djava.awt.headless=true --source 21 tools/BuildMapping.java .
+
+      - name: Änderungen committen
+        run: |
+          git add -A servers servers.json labymod
+          if git diff --cached --quiet; then
+            echo "Keine Änderungen."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Mapping aktualisiert"
+          git push
