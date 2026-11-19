@@ -1,2 +1,4 @@
 * text=auto eol=lf
 *.png binary
+# LabyMod manifests stay byte for byte as in the source (checked by git blob hash)
+labymod/** -text

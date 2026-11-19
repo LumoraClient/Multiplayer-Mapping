@@ -9,6 +9,8 @@ Der Client lädt die Daten nur noch von hier.
 - `servers.json`: alle Server
 - `servers/<id>/icon.png` (128×128) und `servers/<id>/background.png` (640×360): die Bilder, auf die Größe
   verkleinert, die der Client anzeigt
+- `labymod/<server>/manifest.json`: die Manifeste aus LabyMod/server-media, unverändert (Byte für Byte, gegen
+  den Git-Blob-Hash der Quelle geprüft); daraus kommen die Spielmodi in `servers.json`
 
 ```json
 {
@@ -39,7 +41,7 @@ Der Client lädt die Daten nur noch von hier.
 | Quelle | Was übernommen wird |
 | --- | --- |
 | [NoRiskClient/nrc-server-mappings](https://github.com/NoRiskClient/nrc-server-mappings) (GPL-3.0) | Name, Adressen, Kategorien, Spielmodi, Icon und Hintergrund (verkleinert) |
-| [LabyMod/server-media](https://github.com/LabyMod/server-media) | nur Fakten: Name, direkte Adresse, Wildcard-Domains, Spielmodi (Name, Farbe, Versionen); keine Bilder |
+| [LabyMod/server-media](https://github.com/LabyMod/server-media) | die `manifest.json`-Dateien unverändert in `labymod/`; in `servers.json` davon Name, direkte Adresse, Wildcard-Domains und Spielmodi (Name, Farbe, Versionen); keine Bilder |
 
 Server aus beiden Quellen werden über ihre Adressen zusammengeführt. Haben beide Spielmodi, gelten die von
 LabyMod (mit Farben und Versionen). Jede heruntergeladene Datei wird gegen ihren Git-Blob-Hash aus der Quelle
@@ -57,8 +59,9 @@ java --source 21 tools/BuildMapping.java .
 Dieses Repository steht unter der [GPL-3.0](LICENSE), wie die NoRisk-Daten, auf denen es aufbaut. Die Bilder
 wurden gegenüber der Quelle verkleinert.
 
-LabyMod/server-media nennt keine Lizenz. Von dort werden nur Fakten übernommen (Namen, Adressen, Spielmodi) und
-keine Bilder oder Texte. Diese Fakten fallen nicht unter die GPL dieses Repositories.
+LabyMod/server-media nennt keine Lizenz. Die Manifeste in `labymod/` sind unveränderte Kopien von dort; die
+Rechte daran liegen bei LabyMod und den jeweiligen Servern, sie fallen nicht unter die GPL dieses Repositories.
+Bilder werden von dort nicht übernommen.
 
 Alle Servernamen, Logos und Marken gehören ihren jeweiligen Inhabern und dienen nur zur Erkennung des Servers.
 Server-Betreiber, die ihren Eintrag ändern oder entfernen lassen möchten, öffnen bitte ein Issue; Änderungen in

@@ -41,7 +41,8 @@ import java.util.stream.Stream;
  *     direct address, wildcard domains and game modes (name, colour, versions); no pictures, no other fields.</li>
  * </ul>
  * Servers of both sources are joined by their addresses. The result is {@code servers.json} plus the NoRisk pictures,
- * scaled to what the client shows (background 640x360, icon 128x128), in {@code servers/<id>/}.
+ * scaled to what the client shows (background 640x360, icon 128x128), in {@code servers/<id>/}. The LabyMod manifests are
+ * also copied unchanged to {@code labymod/<folder>/manifest.json}.
  * <p>
  * Usage: {@code java tools/BuildMapping.java <repository folder>}. Needs Java 21. Every download is checked against
  * its git blob hash from the source tree. An optional {@code GITHUB_TOKEN} environment variable is sent only to
@@ -195,6 +196,8 @@ public class BuildMapping {
             }
         }
 
+        int labyWritten = copyLabyFiles(root);
+
         // remove pictures and folders that are no longer part of the mapping
         try (Stream<Path> folders = Files.list(dir)) {
             for (Path f : folders.toList()) {
@@ -242,7 +245,7 @@ public class BuildMapping {
             Files.writeString(serversJson, text, StandardCharsets.UTF_8);
         }
         System.out.println("NoRisk " + nrc.size() + ", LabyMod " + laby.size() + ", joined " + joined.size()
-                + ", servers " + servers.size() + ", pictures downloaded " + downloaded
+                + ", servers " + servers.size() + ", pictures downloaded " + downloaded + ", LabyMod manifests written " + labyWritten
                 + (text.equals(before) ? ", servers.json unchanged" : ", servers.json written"));
     }
 
@@ -326,6 +329,37 @@ public class BuildMapping {
         return PNG_FILE.matcher(f).matches() && files.containsKey(f) ? f : null;
     }
 
+    /** The verified LabyMod manifests, byte for byte as in the source, by folder. */
+    static final Map<String, byte[]> LABY_FILES = new java.util.concurrent.ConcurrentHashMap<>();
+
+    /** Copies the LabyMod manifests unchanged to {@code labymod/<folder>/manifest.json}; removes folders gone upstream. */
+    static int copyLabyFiles(Path root) throws IOException {
+        Path dir = root.resolve("labymod");
+        Files.createDirectories(dir);
+        int written = 0;
+        for (Map.Entry<String, byte[]> e : new TreeMap<>(LABY_FILES).entrySet()) {
+            Path file = dir.resolve(e.getKey()).resolve("manifest.json");
+            if (Files.isRegularFile(file) && java.util.Arrays.equals(Files.readAllBytes(file), e.getValue())) {
+                continue;
+            }
+            Files.createDirectories(file.getParent());
+            Files.write(file, e.getValue());
+            written++;
+        }
+        try (Stream<Path> folders = Files.list(dir)) {
+            for (Path f : folders.toList()) {
+                if (Files.isDirectory(f) && !LABY_FILES.containsKey(f.getFileName().toString())) {
+                    try (Stream<Path> walk = Files.walk(f)) {
+                        for (Path p : walk.sorted(Comparator.reverseOrder()).toList()) {
+                            Files.delete(p);
+                        }
+                    }
+                }
+            }
+        }
+        return written;
+    }
+
     static List<Laby> readLaby() throws Exception {
         Map<String, String> folders = new TreeMap<>();
         for (Object o : list(obj(Json.parse(api("https://api.github.com/repos/" + LABY + "/git/trees/" + LABY_BRANCH + "?recursive=1"))).get("tree"))) {
@@ -345,6 +379,7 @@ public class BuildMapping {
                     if (!f.getValue().equals(blobSha(data))) {
                         throw new IOException("LabyMod " + f.getKey() + ": manifest hash differs from the tree");
                     }
+                    LABY_FILES.put(f.getKey(), data);
                     try {
                         return laby(f.getKey(), obj(Json.parse(new String(data, StandardCharsets.UTF_8))));
                     } catch (RuntimeException e) {
