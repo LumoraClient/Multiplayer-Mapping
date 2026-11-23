@@ -1365,6 +1365,20 @@
         "labymod": "clovergames"
       }
     },
+    "cococobblemon": {
+      "name": "Coco Cobblemon",
+      "addresses": ["coco.ultramc.co"],
+      "categories": [],
+      "gamemodes": [
+        {
+          "name": "Cobblemon",
+          "color": "#3B82F6"
+        }
+      ],
+      "from": {
+        "labymod": "cococobblemon"
+      }
+    },
     "coldgames": {
       "name": "ColdGames",
       "addresses": ["coldgames.fun", "coldpvp.com"],
@@ -2700,6 +2714,15 @@
         "labymod": "farmmc"
       }
     },
+    "femsiimc": {
+      "name": "Femsii-MC",
+      "addresses": ["mc.femsii.de"],
+      "categories": [],
+      "gamemodes": [],
+      "from": {
+        "labymod": "femsiimc"
+      }
+    },
     "firsthit": {
       "name": "FirstHit",
       "addresses": ["firsthit.gg", "play.firsthit.gg", "ovention.de"],
@@ -3570,6 +3593,15 @@
       "from": {
         "norisk": "hellosmp",
         "labymod": "hellosmp"
+      }
+    },
+    "heroesia": {
+      "name": "Heroesia",
+      "addresses": ["play.heroesia.fr"],
+      "categories": [],
+      "gamemodes": [],
+      "from": {
+        "labymod": "heroesia"
       }
     },
     "herosmith": {
@@ -4988,6 +5020,24 @@
       "gamemodes": [],
       "from": {
         "labymod": "lythrion"
+      }
+    },
+    "magichills": {
+      "name": "MagicHills.net",
+      "addresses": ["magichills.net"],
+      "categories": [],
+      "gamemodes": [
+        {
+          "name": "CityBuild",
+          "color": "#3F2CFA"
+        },
+        {
+          "name": "SkyWars",
+          "color": "#7B6CFC"
+        }
+      ],
+      "from": {
+        "labymod": "magichills"
       }
     },
     "manacube": {
@@ -6474,8 +6524,111 @@
       "categories": [],
       "gamemodes": [
         {
-          "name": "Practice",
+          "name": "Sumo",
           "color": "#3B9BDF"
+        },
+        {
+          "name": "NoDebuff",
+          "color": "#3B9BDF"
+        },
+        {
+          "name": "Classic",
+          "color": "#3B9BDF"
+        },
+        {
+          "name": "Boxing",
+          "color": "#3B9BDF"
+        },
+        {
+          "name": "BuildUHC",
+          "color": "#3B9BDF"
+        },
+        {
+          "name": "Fireball Fight",
+          "color": "#3B9BDF"
+        },
+        {
+          "name": "Bed Fight",
+          "color": "#3B9BDF"
+        },
+        {
+          "name": "Bridge",
+          "color": "#3B9BDF"
+        },
+        {
+          "name": "Pearl Fight",
+          "color": "#3B9BDF"
+        },
+        {
+          "name": "Bed Wars Solo",
+          "color": "#3B9BDF"
+        },
+        {
+          "name": "Bed Wars Doubles",
+          "color": "#3B9BDF"
+        },
+        {
+          "name": "Bed Wars 3v3v3v3",
+          "color": "#3B9BDF"
+        },
+        {
+          "name": "Bed Wars 4v4v4v4",
+          "color": "#3B9BDF"
+        },
+        {
+          "name": "Vanilla",
+          "color": "#3B9BDF",
+          "versions": "1.21.5<*"
+        },
+        {
+          "name": "Sword",
+          "color": "#3B9BDF",
+          "versions": "1.21.5<*"
+        },
+        {
+          "name": "Axe",
+          "color": "#3B9BDF",
+          "versions": "1.21.5<*"
+        },
+        {
+          "name": "UHC",
+          "color": "#3B9BDF",
+          "versions": "1.21.5<*"
+        },
+        {
+          "name": "Mace",
+          "color": "#3B9BDF",
+          "versions": "1.21.5<*"
+        },
+        {
+          "name": "Nethpot",
+          "color": "#3B9BDF",
+          "versions": "1.21.5<*"
+        },
+        {
+          "name": "Netherite SMP",
+          "color": "#3B9BDF",
+          "versions": "1.21.5<*"
+        },
+        {
+          "name": "Diamond SMP",
+          "color": "#3B9BDF",
+          "versions": "1.21.5<*"
+        },
+        {
+          "name": "Spear Mace",
+          "color": "#3B9BDF",
+          "versions": "1.21.5<*"
+        },
+        {
+          "name": "Cart",
+          "color": "#3B9BDF",
+          "versions": "1.21.5<*"
+        },
+        {
+          "name": "Modern Bridge",
+          "color": "#3B9BDF",
+          "versions": "1.21.5<*"
         }
       ],
       "from": {
@@ -7078,16 +7231,8 @@
           "color": "#00AAAA"
         },
         {
-          "name": "LuckyWars",
-          "color": "#FFFF55"
-        },
-        {
           "name": "LuckyRace",
           "color": "#55FF55"
-        },
-        {
-          "name": "LuckyEggWars",
-          "color": "#FF5555"
         }
       ],
       "from": {
@@ -7274,6 +7419,15 @@
         "labymod": "reventox"
       }
     },
+    "riiax": {
+      "name": "Riiax",
+      "addresses": ["riiax.com"],
+      "categories": [],
+      "gamemodes": [],
+      "from": {
+        "labymod": "riiax"
+      }
+    },
     "rinaorc": {
       "name": "Rinaorc",
       "addresses": ["play.rinaorc.com", "rinaorc.com"],
@@ -7408,6 +7562,15 @@
       ],
       "from": {
         "labymod": "senorpollo"
+      }
+    },
+    "serizon": {
+      "name": "Serizon",
+      "addresses": ["mc.serizon.net"],
+      "categories": [],
+      "gamemodes": [],
+      "from": {
+        "labymod": "serizon"
       }
     },
     "sharpness": {
@@ -8646,7 +8809,7 @@
           "versions": "1.21<*"
         },
         {
-          "name": "SpeedGuessr",
+          "name": "GuessIt",
           "color": "#EEFF00",
           "versions": "1.21<*"
         },
@@ -9047,6 +9210,24 @@
       ],
       "from": {
         "labymod": "voided"
+      }
+    },
+    "voidlight": {
+      "name": "VoidLight",
+      "addresses": ["voidlight.cloud"],
+      "categories": [],
+      "gamemodes": [
+        {
+          "name": "CityBuild",
+          "color": "#A06BFA"
+        },
+        {
+          "name": "Duels",
+          "color": "#7942CF"
+        }
+      ],
+      "from": {
+        "labymod": "voidlight"
       }
     },
     "vortexsmp": {
