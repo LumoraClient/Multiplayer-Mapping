@@ -940,6 +940,41 @@
         "norisk": "breiwalkersmp"
       }
     },
+    "brgblocks": {
+      "name": "BRGBlocks",
+      "addresses": ["brgblocks.net"],
+      "categories": [],
+      "gamemodes": [
+        {
+          "name": "Bedwars",
+          "color": "#E53935",
+          "versions": "1.8<*"
+        },
+        {
+          "name": "SkyWars",
+          "color": "#8E24AA",
+          "versions": "1.8<*"
+        },
+        {
+          "name": "BRG-Cores",
+          "color": "#FB8C00",
+          "versions": "1.8<*"
+        },
+        {
+          "name": "Citybuild",
+          "color": "#D7112A",
+          "versions": "1.21<*"
+        },
+        {
+          "name": "BRG SMP",
+          "color": "#F9A825",
+          "versions": "1.21<*"
+        }
+      ],
+      "from": {
+        "labymod": "brgblocks"
+      }
+    },
     "bridgerland": {
       "name": "Bridger Land",
       "addresses": ["bridger.land"],
@@ -9222,8 +9257,16 @@
           "color": "#A06BFA"
         },
         {
+          "name": "Minigames",
+          "color": "#EAB54B"
+        },
+        {
           "name": "Duels",
           "color": "#7942CF"
+        },
+        {
+          "name": "DeadLine",
+          "color": "#22B9A8"
         }
       ],
       "from": {
