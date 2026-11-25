@@ -1518,23 +1518,18 @@
       "categories": [],
       "gamemodes": [
         {
-          "name": "Crafterbreak",
-          "color": "#07F0E0",
-          "versions": "1.7<*"
-        },
-        {
-          "name": "WoolBattleRoyale",
-          "color": "#1BCFCC",
+          "name": "Cores",
+          "color": "#00FFFF",
           "versions": "1.7<*"
         },
         {
           "name": "GetDown",
-          "color": "#07F0E0",
+          "color": "#66FF66",
           "versions": "1.7<*"
         },
         {
           "name": "Cookies",
-          "color": "#07F0E0",
+          "color": "#CC6600",
           "versions": "1.7<*"
         },
         {
@@ -1543,13 +1538,18 @@
           "versions": "1.7<*"
         },
         {
-          "name": "+12 More",
-          "color": "#1BBACF",
+          "name": "BlockHunt",
+          "color": "#6600FF",
           "versions": "1.7<*"
         },
         {
-          "name": "BlockHunt",
-          "color": "#27E0F5",
+          "name": "Crafterbreak",
+          "color": "#07F0E0",
+          "versions": "1.7<*"
+        },
+        {
+          "name": "WoolBattleRoyale",
+          "color": "#1BCFCC",
           "versions": "1.7<*"
         },
         {
@@ -4739,7 +4739,8 @@
       },
       "gamemodes": [],
       "from": {
-        "norisk": "lerosmp"
+        "norisk": "lerosmp",
+        "labymod": "lerosmp"
       }
     },
     "librecraft": {
