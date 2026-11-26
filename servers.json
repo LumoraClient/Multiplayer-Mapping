@@ -3708,6 +3708,38 @@
         "labymod": "hielkemapsnetwork"
       }
     },
+    "hokai": {
+      "name": "Hokai.net",
+      "addresses": ["hokai.net", "play.hokai.net", "mc.hokai.net", "bedrock.hokai.net"],
+      "categories": ["MINIGAMES"],
+      "icon": {
+        "file": "servers/hokai/icon.png",
+        "sha": "5d7ca8679ecf9b6367e7d4bc6444c7bdda38d26b",
+        "source": "2cd9858c43c7cf4b3132891a9d01c87b5a855d83"
+      },
+      "background": {
+        "file": "servers/hokai/background.png",
+        "sha": "3cd117c3d2aa7a9b4d89074c2283c2f8faa48c55",
+        "source": "5694c8146333a41010845f9be849af50ed66070c"
+      },
+      "gamemodes": [
+        {
+          "name": "Party Games"
+        },
+        {
+          "name": "Dodgebow"
+        },
+        {
+          "name": "Capture the Flag"
+        },
+        {
+          "name": "Survival Games"
+        }
+      ],
+      "from": {
+        "norisk": "hokai"
+      }
+    },
     "hollowcube": {
       "name": "HollowCube",
       "addresses": ["hollowcube.net"],
@@ -4173,6 +4205,25 @@
         "labymod": "hypixel"
       }
     },
+    "iansmp": {
+      "name": "Ian SMP",
+      "addresses": ["ianthraghor.com"],
+      "categories": ["SURVIVAL"],
+      "icon": {
+        "file": "servers/iansmp/icon.png",
+        "sha": "6005e7c3b446eaf63a17daa55813f92fe1a26dd2",
+        "source": "3594cddfc5988c654a7c02e585638be43cf5ca27"
+      },
+      "background": {
+        "file": "servers/iansmp/background.png",
+        "sha": "327438ae1d4f926bee0daabc172e2076a2dff093",
+        "source": "3d689dc5753b1da55e0378e7c93bc20150a81a52"
+      },
+      "gamemodes": [],
+      "from": {
+        "norisk": "iansmp"
+      }
+    },
     "icedout": {
       "name": "Icedout",
       "addresses": ["icedoutc4.de", "firesmp.eu"],
@@ -4385,6 +4436,25 @@
       ],
       "from": {
         "norisk": "kansyfamily"
+      }
+    },
+    "kcevents": {
+      "name": "KCEvents",
+      "addresses": ["kclucas.de", "mc.kclucas.de"],
+      "categories": ["MINIGAMES", "CUSTOM"],
+      "icon": {
+        "file": "servers/kcevents/icon.png",
+        "sha": "df117bdebe3be072509e247fd58cbf7b37f8162e",
+        "source": "a80411fef6a07f62a12436e04bddc311a2b62e54"
+      },
+      "background": {
+        "file": "servers/kcevents/background.png",
+        "sha": "d6ce04962e5e72f767f28d496edea6ff2d09a6c9",
+        "source": "b0986a3052497b68e32a7376a2b8346ae91cac93"
+      },
+      "gamemodes": [],
+      "from": {
+        "norisk": "kcevents"
       }
     },
     "kig": {
@@ -7279,7 +7349,17 @@
     "randymc": {
       "name": "RandyMC",
       "addresses": ["randymc.de"],
-      "categories": [],
+      "categories": ["RPG", "MINIGAMES", "PVP"],
+      "icon": {
+        "file": "servers/randymc/icon.png",
+        "sha": "fb1c51b41988dcdaa71589ffc803bbb9356099ed",
+        "source": "0de2f5edf8fbd1e30bc139001e82a570d974a096"
+      },
+      "background": {
+        "file": "servers/randymc/background.png",
+        "sha": "26cec4230b4fec0caab7b2d39cc3d089dc714514",
+        "source": "5ef5c59f354e239c363a7977eef0d19068bfee97"
+      },
       "gamemodes": [
         {
           "name": "School",
@@ -7291,6 +7371,7 @@
         }
       ],
       "from": {
+        "norisk": "randymc",
         "labymod": "randymc"
       }
     },
@@ -7834,6 +7915,25 @@
         "labymod": "smashmc"
       }
     },
+    "snowprac": {
+      "name": "SnowPrac",
+      "addresses": ["snowprac.net"],
+      "categories": ["PVP", "KITPVP"],
+      "icon": {
+        "file": "servers/snowprac/icon.png",
+        "sha": "37cef2bedb92b5f9862caa5c0f2c6e3327398cbb",
+        "source": "34d21bbc2998e3adbc845fee337d7e291113d9db"
+      },
+      "background": {
+        "file": "servers/snowprac/background.png",
+        "sha": "af7330c8fc7a7446d242b2243120e217913b0931",
+        "source": "cbd985ef61555054809e0258f2b6e0c9a882028a"
+      },
+      "gamemodes": [],
+      "from": {
+        "norisk": "snowprac"
+      }
+    },
     "sololegends": {
       "name": "SoloLegends",
       "addresses": ["sololegends.net"],
@@ -7958,6 +8058,38 @@
       ],
       "from": {
         "labymod": "spot"
+      }
+    },
+    "srino": {
+      "name": "Srino",
+      "addresses": ["srino.net"],
+      "categories": ["CITYBUILD", "SURVIVAL", "PVP", "KITPVP"],
+      "icon": {
+        "file": "servers/srino/icon.png",
+        "sha": "0e206494c093e265a2fda140e45168a6c40190d4",
+        "source": "8f4432a73bd0830ce640ee67a9ab1433af53ea41"
+      },
+      "background": {
+        "file": "servers/srino/background.png",
+        "sha": "491aaf57d581b3c46527a152d0d6d0ab81b05e6c",
+        "source": "9d9d7bfd736a267ecdeec7cf97e5dcd2249d7970"
+      },
+      "gamemodes": [
+        {
+          "name": "Citybuild"
+        },
+        {
+          "name": "SMP"
+        },
+        {
+          "name": "Box"
+        },
+        {
+          "name": "Kits"
+        }
+      ],
+      "from": {
+        "norisk": "srino"
       }
     },
     "stardix": {
@@ -9299,8 +9431,8 @@
       "categories": ["SURVIVAL"],
       "icon": {
         "file": "servers/vortexsmp/icon.png",
-        "sha": "b072c8c5486af77061dcf3009b4016bfaa90547d",
-        "source": "b392515bbd117cf8eeb754b08906705390503ea4"
+        "sha": "b6b8c213849a40f8ce0060abf966bb567084cd73",
+        "source": "a0418b4b083693d9bd00fe607d7b96a6ed4a80df"
       },
       "background": {
         "file": "servers/vortexsmp/background.png",
