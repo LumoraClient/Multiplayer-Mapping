@@ -5141,6 +5141,25 @@
         "norisk": "mantu"
       }
     },
+    "marcloud": {
+      "name": "marCloud",
+      "addresses": ["marcloud.net"],
+      "categories": ["PVP", "SURVIVAL", "MINIGAMES"],
+      "icon": {
+        "file": "servers/marcloud/icon.png",
+        "sha": "d5e8fd060788945ac947ee65fd0cf8408518d4c5",
+        "source": "d53e6a34a1e1d629de1bd3c7528e5663cd04bc95"
+      },
+      "background": {
+        "file": "servers/marcloud/background.png",
+        "sha": "fe1ea98079c5ad9902fd7ac06dba49cbaf8746cf",
+        "source": "265641eb6afe9f84f50343708f671b7813decb46"
+      },
+      "gamemodes": [],
+      "from": {
+        "norisk": "marcloud"
+      }
+    },
     "marguhl": {
       "name": "Marguhl",
       "addresses": ["marguhl.net"],
