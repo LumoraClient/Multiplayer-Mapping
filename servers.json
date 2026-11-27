@@ -1533,6 +1533,11 @@
           "versions": "1.7<*"
         },
         {
+          "name": "CrafterSMP",
+          "color": "#F705AB",
+          "versions": "1.21.8<*"
+        },
+        {
           "name": "UHCBingo",
           "color": "#C21588",
           "versions": "1.7<*"
@@ -1583,7 +1588,7 @@
           "versions": "1.7<*"
         },
         {
-          "name": "SFFA",
+          "name": "SwitchFFA",
           "color": "#07F0E1",
           "versions": "1.7<*"
         },
@@ -1601,11 +1606,6 @@
           "name": "SkyPvP",
           "color": "#F7DF05",
           "versions": "1.7<*"
-        },
-        {
-          "name": "Survival",
-          "color": "#F705AB",
-          "versions": "1.21.8<*"
         }
       ],
       "from": {
@@ -9245,6 +9245,15 @@
       ],
       "from": {
         "norisk": "vanitymc"
+      }
+    },
+    "ventrixmc": {
+      "name": "VentrixMC",
+      "addresses": ["ventrixmc.de"],
+      "categories": [],
+      "gamemodes": [],
+      "from": {
+        "labymod": "ventrixmc"
       }
     },
     "veranity": {
